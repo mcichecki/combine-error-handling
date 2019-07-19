@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
+    <pages>
+        <page name='1. All'/>
+        <page name='2. No error handling'/>
+        <page name='3. assertNoFailure'/>
+        <page name='4. catch'/>
+        <page name='5. mapError'/>
+        <page name='6. setFailureType'/>
+        <page name='7. retry'/>
+        <page name='8. replaceError'/>
+        <page name='9. Example with URLSession'/>
+    </pages>
+</playground>
