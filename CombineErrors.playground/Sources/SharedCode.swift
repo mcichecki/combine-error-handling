@@ -14,7 +14,7 @@ public enum ProcessingError: Error {
 }
 
 /// Handling completion with Errors
-public let onErrorCompletion: ((Subscribers.Completion<Error>) -> Void)? = { completion in
+public let onErrorCompletion: (Subscribers.Completion<Error>) -> Void = { completion in
     switch completion {
     case .finished: print("🏁 finished")
     case .failure(let error): print("❗️ failure: \(error)")
@@ -22,7 +22,7 @@ public let onErrorCompletion: ((Subscribers.Completion<Error>) -> Void)? = { com
 }
 
 /// Handling completions with Never
-public let onNeverCompletion: ((Subscribers.Completion<Never>) -> Void)? = { completion in
+public let onNeverCompletion: (Subscribers.Completion<Never>) -> Void = { completion in
     switch completion {
     case .finished: print("🏁 finished")
     case .failure(let never): print("❗️ failure: \(never)")
