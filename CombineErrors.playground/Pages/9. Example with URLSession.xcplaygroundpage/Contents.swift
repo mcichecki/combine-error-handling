@@ -48,7 +48,7 @@ func get() -> AnyPublisher<Item, ServiceError> {
             }
     }
     .retry(1)
-        .eraseToAnyPublisher()
+    .eraseToAnyPublisher()
 }
 
 /*:
@@ -56,6 +56,7 @@ func get() -> AnyPublisher<Item, ServiceError> {
  */
 
 get()
+    .receive(on: RunLoop.main)
     .sink(receiveCompletion: { completion in
         switch completion {
         case .finished: print("🏁 finished")
